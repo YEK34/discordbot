@@ -204,4 +204,10 @@ async def on_message(message):
 
     await client.process_commands(message)
 
-client.run("TOKEN")
+@client.command()
+async def mem(ctx):
+    with open('M2L1\RESİMLER\mem1.png','rb') as f:
+        picture = discord.File(f)
+    await ctx.send(file=picture)
+
+client.run("MTIwMzI3NzYwMjYwMTcwNTUzMw.GrCs2A.KkPBroWxXFMCFEAKETAUbyC5ucKIbeeuIoFkDo")
