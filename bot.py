@@ -210,4 +210,4 @@ async def mem(ctx):
         picture = discord.File(f)
     await ctx.send(file=picture)
 
-client.run("MTIwMzI3NzYwMjYwMTcwNTUzMw.GrCs2A.KkPBroWxXFMCFEAKETAUbyC5ucKIbeeuIoFkDo")
+client.run("TOKEN")
