@@ -4,6 +4,7 @@ from bot_mantik import gen_pass
 from discord import FFmpegPCMAudio
 import os
 import time
+import random
 
 current_time = time.strftime("%H:%M")
 current_date = time.strftime("%d.%m.%Y")
@@ -64,7 +65,7 @@ async def on_message(message):
         await message.channel.send("Eğveeğt doğru ceğvap")
 
 
-    argo_kelimeler = ["velet", "bok", "enayi", "şerefsiz", "mal", "salak", "gerizekalı","lan",]
+    argo_kelimeler = ["velet", "bok", "enayi", "şerefsiz", "mal", "salak", "gerizekalı","lan","aptal","göt"]
 
     if any(word in message.content.lower().split() for word in argo_kelimeler):
         await message.channel.send("Lütfen düzgün konuşalım. Kötü kelimeler kullanmaktan kaçınalım.")
@@ -206,8 +207,31 @@ async def on_message(message):
 
 @client.command()
 async def mem(ctx):
-    with open('M2L1\RESİMLER\mem1.png','rb') as f:
-        picture = discord.File(f)
-    await ctx.send(file=picture)
+    y = random.randint(1,4)
+
+    if y == 1:
+        with open('M2L1\RESİMLER\mem1.png','rb') as f:
+            picture = discord.File(f)
+        await ctx.send(file=picture)
+
+    if y == 2:
+        with open('M2L1\RESİMLER\mem2.jpg','rb') as f:
+            picture = discord.File(f)
+        await ctx.send(file=picture)
+
+    if y == 3:
+        with open('M2L1\RESİMLER\mem3.jpg','rb') as f:
+            picture = discord.File(f)
+        await ctx.send(file=picture)
+
+    if y == 4:
+        with open('M2L1\RESİMLER\mem4.jpg','rb') as f:
+            picture = discord.File(f)
+        await ctx.send(file=picture)
+
+    if y == 5:
+        with open('M2L1\RESİMLER\mem5.jpg','rb') as f:
+            picture = discord.File(f)
+        await ctx.send(file=picture)
 
 client.run("TOKEN")
